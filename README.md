@@ -43,17 +43,17 @@ pip install -r requirements.txt
 ## 📝 Kullanım Örnekleri (RESİM)
 
 ### Görev Ekleme: `!add_task <açıklama>`
-![Görev Ekleme Örneği] (![task_added](https://github.com/user-attachments/assets/9d4ae87f-bd6d-4d77-97cc-bcfb9b4fd256)
+ ![task_added](https://github.com/user-attachments/assets/9d4ae87f-bd6d-4d77-97cc-bcfb9b4fd256)
 
 ### Görevleri Listeleme : `!show_tasks`
-![Görev Listeleme Örneği] ( ![task_show_1](https://github.com/user-attachments/assets/43510674-a9bd-41a4-9cba-8f010c1d70aa)
-(![task_show_2](https://github.com/user-attachments/assets/49cf2175-ab46-417d-9535-75df6a535430)
+![task_show_1](https://github.com/user-attachments/assets/43510674-a9bd-41a4-9cba-8f010c1d70aa)
+![task_show_2](https://github.com/user-attachments/assets/49cf2175-ab46-417d-9535-75df6a535430)
 
 ### Görev Tamamlama: `!complete_task <görev_numarası>`
-![Görev Tamalama Örneği] (![task_complete](https://github.com/user-attachments/assets/50e35fd6-934c-4c7c-ba2f-bbd5dafc7963)
+![task_complete](https://github.com/user-attachments/assets/50e35fd6-934c-4c7c-ba2f-bbd5dafc7963)
 
 ### Görev Silme: `!delete_task <görev_numarası>`
-![Görev Silme Örneği] (![task_delete](https://github.com/user-attachments/assets/c1f48aa5-5464-4cc5-b9a1-d5af695f92b3)
+![task_delete](https://github.com/user-attachments/assets/c1f48aa5-5464-4cc5-b9a1-d5af695f92b3)
 
 ---
 
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 Testleri çalıştırmak için:
 - python run_tests.py
-- ( ![tests_results](https://github.com/user-attachments/assets/9414e82f-e36d-48c6-b141-03cfa3685aa1)
+- ![tests_results](https://github.com/user-attachments/assets/9414e82f-e36d-48c6-b141-03cfa3685aa1)
 
 
 **Örnek Test Çıktısı:** (RESİM)
@@ -73,23 +73,34 @@ Testleri çalıştırmak için:
 
 ## 📂 Proje Yapısı
 task_manager_bot/
+
 ├── bot.py
+
 ├── database.py
+
 ├── tests/
+
 │ ├── test_add_task.py
+
 │ ├── test_delete_task.py
+
 │ └── ...
 ├── requirements.txt
+
 ├── README.md
+
 └── .env
+
 ---
 
 ## 👥 Katkıda Bulunanlar
+
 - [Muhammed](https://github.com/dashboard)
 
 ---
 
 ## 📜 Lisans
+
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 ---
