@@ -61,7 +61,8 @@ pip install -r requirements.txt
 
 Testleri çalıştırmak için:
 - python run_tests.py
-- ![tests_results](https://github.com/user-attachments/assets/9414e82f-e36d-48c6-b141-03cfa3685aa1)
+- ![image](https://github.com/user-attachments/assets/356e8a6f-4cb9-4f91-865e-3a66f765edc5)
+
 
 
 **Örnek Test Çıktısı:** (RESİM)
