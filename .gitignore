@@ -1,2 +1,17 @@
-.env
+# Python dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
+# Sanal ortam
+venv/
+.env/
+
+# IDE ve editör dosyaları
+.vscode/
+.idea/
+
+# Diğer
+.DS_Store
+.env
