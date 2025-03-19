@@ -43,6 +43,8 @@ pip install -r requirements.txt
 ## 📝 Kullanım Örnekleri (RESİM)
 
 ### Görev Ekleme: `!add_task <açıklama>`
+![Görev Ekleme Örneği] (![task_added](https://github.com/user-attachments/assets/9d4ae87f-bd6d-4d77-97cc-bcfb9b4fd256)
+
 ### Görevleri Listeleme : `!show_tasks`
 ### Görev Tamamlama: `!complete_task <görev_numarası>`
 ### Görev Silme: `!delete_task <görev_numarası>`
