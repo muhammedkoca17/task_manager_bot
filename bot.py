@@ -42,15 +42,14 @@ async def add_task(ctx, *, description):
 
 # Görev silme komutu
 @tmb.command()
-async def delete_task(ctx, task_number: int):
-    tasks = db.get_all_tasks()
-    if task_number < 1 or task_number > len(tasks):  # Geçersiz görev numarası kontrolü
-        await ctx.send("Geçersiz görev numarası!")
+async def delete_task(ctx, task_id: int):
+    task = db.get_task_by_id(task_id)  # Veritabanından ID'ye göre görev al
+    if not task:  # Eğer böyle bir görev yoksa
+        await ctx.send("Bu ID'ye sahip bir görev bulunamadı!")
         return
-
-    real_task_id = tasks[task_number - 1][0]  # Gerçek ID'yi bul
-    db.delete_task(real_task_id)  # Gerçek ID ile silme işlemi yap
-    await ctx.send(f"Görev {task_number} (ID: {real_task_id}) silindi.")
+    
+    db.delete_task(task_id)  # Gerçek ID ile silme işlemi yapılır
+    await ctx.send(f"ID: {task_id} olan görev silindi.")
 
 # Görevleri listeleme komutu
 @tmb.command()
@@ -61,23 +60,22 @@ async def show_tasks(ctx):
         return
 
     task_list = []
-    for index, task in enumerate(tasks, start=1):  # Sıralı numaralar kullan
-        status = "✅" if task[2] else "❌"
-        task_list.append(f"{index}-(ID: {task[0]}): {task[1]} (Tamamlandı: {status})")
+    for index, task in enumerate(tasks, start=1):  # Görevleri sıralı şekilde listele
+        status = "✅" if task[2] else "❌"  # Tamamlanma durumunu belirle
+        task_list.append(f"{index}. ID: {task[0]} - {task[1]} (Tamamlandı: {status})")  # Görev numarasını başta ekle
     
     await ctx.send("Görev Listesi:\n" + "\n".join(task_list))
 
 # Görevi tamamlandı olarak işaretleme komutu
 @tmb.command()
-async def complete_task(ctx, task_number: int):
-    tasks = db.get_all_tasks()
-    if task_number < 1 or task_number > len(tasks):  # Geçersiz görev numarası kontrolü
-        await ctx.send("Geçersiz görev numarası!")
+async def complete_task(ctx, task_id: int):
+    task = db.get_task_by_id(task_id)  # Veritabanından ID'ye göre görev al
+    if not task:  # Eğer böyle bir görev yoksa
+        await ctx.send("Bu ID'ye sahip bir görev bulunamadı!")
         return
 
-    real_task_id = tasks[task_number - 1][0]  # Gerçek ID'yi bul
-    db.complete_task(real_task_id)  # Gerçek ID ile işlemi yap
-    await ctx.send(f"Görev {task_number} (ID: {real_task_id}) tamamlandı olarak işaretlendi.")
+    db.complete_task(task_id)  # Gerçek ID ile işlemi yap
+    await ctx.send(f"ID: {task_id} olan görev tamamlandı olarak işaretlendi.")
 
 # Veritabanını sıfırlama komutu (sadece bot sahibi kullanabilir)
 @tmb.command()
