@@ -28,3 +28,12 @@ Bu proje, Discord sunucularında küçük ekiplerin görevlerini yönetmek için
    git clone https://github.com/muhammedkoca17/task_manager_bot.git
    cd task_manager_bot
 
+## Bağımlılıkları Yükleyin:
+pip install -r requirements.txt
+
+## Bot Token'ını Ayarlayın:
+DISCORD_TOKEN=token_buraya
+OWNER_ID =your_discord_ID
+
+## Botu Başlatın:
+python bot.py
