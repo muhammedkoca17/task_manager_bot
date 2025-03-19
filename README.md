@@ -1,5 +1,4 @@
-# task_manager_bot
-=======
+
 # Discord Görev Yöneticisi Botu
 
 Bu proje, Discord sunucularında küçük ekiplerin görevlerini yönetmek için tasarlanmış bir bottur. Görev ekleme, silme, görüntüleme ve tamamlama işlemlerini destekler. Tüm veriler SQLite veritabanında saklanır.
