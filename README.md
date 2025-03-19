@@ -32,8 +32,62 @@ Bu proje, Discord sunucularında küçük ekiplerin görevlerini yönetmek için
 pip install -r requirements.txt
 
 ## Bot Token'ını Ayarlayın:
-DISCORD_TOKEN=token_buraya
-OWNER_ID =your_discord_ID
+- DISCORD_TOKEN=token_buraya
+- OWNER_ID =your_discord_ID
 
 ## Botu Başlatın:
-python bot.py
+- python bot.py
+
+---
+
+## 📝 Kullanım Örnekleri (RESİM)
+
+### Görev Ekleme: `!add_task <açıklama>`
+### Görevleri Listeleme : `!show_tasks`
+### Görev Tamamlama: `!complete_task <görev_numarası>`
+### Görev Silme: `!delete_task <görev_numarası>`
+
+---
+
+## 🧪 Testler
+
+Testleri çalıştırmak için:
+- python run_tests.py
+
+**Örnek Test Çıktısı:** (RESİM)
+✅ Veritabanı bağlantısı başlatıldı.
+✅ Test başladı: Veritabanında önceden görev bulunmuyor.
+✅ 2 görev başarıyla eklendi.
+✅ Görev açıklamaları doğru eşleşiyor.
+---
+
+## 📂 Proje Yapısı
+task_manager_bot/
+├── bot.py
+├── database.py
+├── tests/
+│ ├── test_add_task.py
+│ ├── test_delete_task.py
+│ └── ...
+├── requirements.txt
+├── README.md
+└── .env
+---
+
+## 👥 Katkıda Bulunanlar
+- [Muhammed](https://github.com/dashboard)
+
+---
+
+## 📜 Lisans
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+
+---
+
+## 🚀 Gelecek Geliştirmeler
+- Yetkilendirme sistemi
+- Görev hatırlatıcıları
+- Çoklu sunucu desteği
+- Dil desteği
+
+---
