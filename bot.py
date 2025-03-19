@@ -43,7 +43,7 @@ async def add_task(ctx, *, description):
 # Görev silme komutu
 @tmb.command()
 async def delete_task(ctx, task_id: int):
-    task = db.get_task_by_id(task_id)  # Veritabanından ID'ye göre görev al
+    task = db.get_task(task_id)  # Veritabanından ID'ye göre görev al
     if not task:  # Eğer böyle bir görev yoksa
         await ctx.send("Bu ID'ye sahip bir görev bulunamadı!")
         return
@@ -69,7 +69,7 @@ async def show_tasks(ctx):
 # Görevi tamamlandı olarak işaretleme komutu
 @tmb.command()
 async def complete_task(ctx, task_id: int):
-    task = db.get_task_by_id(task_id)  # Veritabanından ID'ye göre görev al
+    task = db.get_task(task_id)  # Veritabanından ID'ye göre görev al
     if not task:  # Eğer böyle bir görev yoksa
         await ctx.send("Bu ID'ye sahip bir görev bulunamadı!")
         return

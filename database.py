@@ -42,6 +42,7 @@ class Database:
         """Tüm görevleri döndürür."""
         self.cursor.execute("SELECT id, description, completed FROM tasks")
         return self.cursor.fetchall()
+
     def reset_database(self):
         """Tüm görevleri siler ve veritabanını sıfırlar."""
         self.cursor.execute("DELETE FROM tasks")  # Tüm görevleri sil
