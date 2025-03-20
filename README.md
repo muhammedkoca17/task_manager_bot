@@ -22,7 +22,7 @@ Bu proje, Discord sunucularında küçük ekiplerin görevlerini yönetmek için
 - **Geniş Topluluk Desteği:** Büyük bir geliştirici topluluğu ve zengin dokümantasyon desteği bulunmaktadır.
 
  - **Esneklik:** Hem küçük ölçekli botlar hem de büyük ölçekli projeler için uygundur.
- - 
+
 ### Daha Fazla Bilgi
 
 - [discord.py Dokümantasyonu](https://discordpy.readthedocs.io/en/stable/)
