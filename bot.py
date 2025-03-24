@@ -37,8 +37,22 @@ def shutdown_bot():
 # Görev ekleme komutu
 @tmb.command()
 async def add_task(ctx, *, description):
-    task_id = db.add_task(description)
-    await ctx.send(f"Görev eklendi: {description}\nTüm görevleri görüntülemek için `!show_tasks` kullanın.")
+    """Görev ekleme komutu (boş görev kontrolü + orijinal mesaj)"""
+    try:
+        # Boş görev kontrolü
+        if not description.strip():
+            await ctx.send("❌ Hata: Görev açıklaması boş olamaz!")
+            return
+            
+        task_id = db.add_task(description)
+        await ctx.send(f"Görev eklendi: {description}\nTüm görevleri görüntülemek için `!show_tasks` kullanın.")
+        
+    except ValueError as e:
+        # Veritabanı katmanından gelen özel hatalar
+        await ctx.send(f"❌ Veritabanı Hatası: {str(e)}")
+    except Exception as e:
+        # Diğer beklenmedik hatalar için global hata yöneticisine bırak
+        raise  # Global on_command_error yakalayacak
 
 # Görev silme komutu
 @tmb.command()

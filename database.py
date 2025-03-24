@@ -18,8 +18,12 @@ class Database:
         self.connection.commit()
     
     def add_task(self, description):
-        """Yeni bir görev ekler ve ID'sini döndürür."""
-        self.cursor.execute("INSERT INTO tasks (description, completed) VALUES (?, ?)", (description, 0))
+        """Yeni görev ekler (boş görevleri engeller)"""
+        if not description or not description.strip():
+            raise ValueError("Görev açıklaması boş olamaz!")
+    
+        self.cursor.execute("INSERT INTO tasks (description, completed) VALUES (?, ?)", 
+                       (description.strip(), 0))
         self.connection.commit()
         return self.cursor.lastrowid
 
