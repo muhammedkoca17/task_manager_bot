@@ -24,7 +24,7 @@ class TestShowTasks(unittest.TestCase):
         self.assertEqual(tasks[0][2], 0)  # Tamamlanma durumu
 
     def test_show_multiple_tasks(self):
-        """Çoklu görev listeleme testi"""
+        """Çoklu Görev listeleme testi"""
         self.db.add_task("Test görevi 1")
         self.db.add_task("Test görevi 2")
         self.db.complete_task(1)  # İlk görevi tamamla

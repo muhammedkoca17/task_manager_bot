@@ -28,7 +28,7 @@ class Database:
         return self.cursor.lastrowid
 
     def delete_task(self, task_id):
-        """Belirtilen ID'ye sahip görevi siler."""
+        """Belirtilen ID'ye sahip görevi siler.."""
         self.cursor.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
         self.connection.commit()
 

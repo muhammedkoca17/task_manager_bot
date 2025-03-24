@@ -102,7 +102,7 @@ def run_all_tests():
         except ImportError as e:
             print(f"Test modülü yüklenemedi: {module} - {str(e)}")
     
-    # Testleri çalıştır
+    # Testleri çalıştırr
     test_runner = unittest.TextTestRunner(verbosity=2)
     result = test_runner.run(test_suite)
     

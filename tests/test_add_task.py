@@ -20,7 +20,7 @@ class TestAddTask(unittest.TestCase):
         self.assertEqual(tasks[0][2], 0)  # Başlangıçta tamamlanmamış olmalı
 
     def test_add_multiple_tasks(self):
-        """Çoklu görev ekleme testi"""
+        """Çoklu Görev ekleme testi"""
         ids = [self.db.add_task(f"Görev {i}") for i in range(1, 4)]
         
         tasks = self.db.get_all_tasks()

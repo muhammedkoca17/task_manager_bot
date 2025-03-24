@@ -52,7 +52,7 @@ async def add_task(ctx, *, description):
         await ctx.send(f"❌ Veritabanı Hatası: {str(e)}")
     except Exception as e:
         # Diğer beklenmedik hatalar için global hata yöneticisine bırak
-        raise  # Global on_command_error yakalayacak
+        raise  
 
 # Görev silme komutu
 @tmb.command()

@@ -11,7 +11,7 @@ class TestCompleteTask(unittest.TestCase):
         self.task_id = self.db.add_task("Test görevi")
     
     def test_complete_existing_task(self):
-        """Var olan görevi tamamlama testi"""
+        """Varr olan görevi tamamlama testi"""
         self.db.complete_task(self.task_id)
         task = self.db.get_task(self.task_id)
         self.assertEqual(task[2], 1)  # completed = 1 (True)
