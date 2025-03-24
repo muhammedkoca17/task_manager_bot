@@ -9,17 +9,13 @@ from database import Database
 class TestDeleteTask(unittest.TestCase):
     def setUp(self):
         self.db = Database(":memory:")
-        self.db.add_task("Test görevi")
+        self.task_id = self.db.add_task("Test")
     
     def test_delete_task(self):
-        print("delete_task fonksiyonu test ediliyor....")
-        self.db.delete_task(1)
-        tasks = self.db.get_all_tasks()
-        self.assertEqual(len(tasks), 0)
-        print("delete_task fonksiyonu başarılı.")
+        self.db.delete_task(self.task_id)
+        self.assertIsNone(self.db.get_task(self.task_id))
 
     def tearDown(self):
         self.db.close()
-
 if __name__ == "__main__":
     unittest.main()
