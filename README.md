@@ -88,7 +88,7 @@ Testleri çalıştırmak için:
 - python run_tests.py
   
 **Örnek Test Çıktısı:**
-- ![image](https://github.com/user-attachments/assets/6f650065-5a12-4b26-85f6-083efc173c75)
+- ![image](https://github.com/user-attachments/assets/a42869b2-d4a1-43d6-8d39-15f51c1ab72a)
 - ![image](https://github.com/user-attachments/assets/373219af-274d-4b81-996a-7605e99d5810)
 
 
